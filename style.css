@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient( rgba(0, 0, 159, 0.692),rgba(128, 0, 128, 0.687));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.remove{
+    
+}
+.container{
+    height: 400px;
+    width: 300px;
+    background: linear-gradient(rgba(113, 2, 83, 0.349),rgba(58, 6, 155, 0.797));
+    display: block;
+    text-align: center;
+
+  
+}
+p{
+    margin: 8px 0;
+    font-size: 35px;
+    /* text-align: center; */
+    background: linear-gradient(to right,blue, rgb(70, 2, 62));
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 800;
+    animation: change 2s  infinite  alternate;
+    text-shadow: 0 0 1px rgb(223, 19, 223),
+    0 0 2px rgb(114, 12, 210);
+
+}
+@keyframes change {
+    0%{
+        text-shadow: 0 0 1px rgba(247, 243, 248, 0.963);
+
+    }
+    100%{
+        text-shadow: 0 0 1px rgb(46, 186, 225);
+    }
+    
+    
+}
+#input{
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 10px;
+    width: 90%;
+}
+#box{
+    max-height: 0;
+    overflow: hidden;
+    width: 150px;
+    transition: max-height 1s;
+    border-radius: 5px;
+    
+}
+#box img{
+    padding: 10px;
+    width: 100%;
+
+
+}
+#box.show-img{
+   max-height: 200px;
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    border: 2px solid rgb(234, 238, 239);
+}
+
+#button{
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    background: rgb(52, 148, 222);
+    color: white;
+    width: 90%;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px  rgb(25, 16, 159) ;
+    transition: all ease-in-out 0.1s;
+}
+#button:hover{
+    /* -webkit-box-reflect: below
+    2px linear-gradient(transparent,  rgb(25, 142, 188)); */
+       box-shadow: 0 0 5px  rgb(52, 148, 222),
+     0 0 15px  rgb(52, 148, 222),
+     0 0 20px  rgb(52, 148, 222),
+     0 0 50px  rgb(52, 148, 222); 
+
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-4px);
+    }
+   50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-4px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+    
+}

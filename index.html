@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <p>Write Something</p>
+        <input type="text" placeholder="Add Something" id="input">
+        <div id="box">   
+            <img src=""  id="qrimage">
+    </div>
+
+       
+        <button onclick="code()"  id="button">QR Generator</button>
+      
+
+
+    </div>
+
+    <script>
+        let image = document.getElementById('box');
+        let input = document.getElementById('input');
+        let btn = document.getElementById('button');
+      
+             
+function code(){
+    if(input.value.length > 0){
+        qrimage.src ="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data= " + input.value;
+   box.classList.add("show-img");
+    }
+    else{
+        input.classList.add('error');
+        setTimeout(()=>{
+            input.classList.remove('error');
+        },1000);
+    }
+    
+
+        }
+    </script>
+</body>
+</html>
